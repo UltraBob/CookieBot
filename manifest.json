@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "CookieBot",
+  "version": "1.0",
+
+  "description": "Scores crazy cookies on CookieClicker.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ultrabob@t4ac.com"
+    }
+  },
+
+  "icons": {
+    "48": "icons/perfectCookie.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://orteil.dashnet.org/cookieclicker*"],
+      "run_at": "document_end",
+      "js": ["content_script.js"]
+    }
+  ]
+}
